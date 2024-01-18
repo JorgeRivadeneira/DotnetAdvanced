@@ -2,6 +2,9 @@
 # .NET Core build folders
 bin/
 obj/
+DelegatesAndEvents/bin/
+DelegatesAndEvents/obj/
+*.vsidx
 
 # Common node modules locations
 /node_modules
