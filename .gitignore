@@ -4,6 +4,12 @@ bin/
 obj/
 DelegatesAndEvents/bin/
 DelegatesAndEvents/obj/
+
+AnotherAttributeExample/bin/
+AnotherAttributeExample/obj/
+
+Attributes/bin/
+Attributes/obj/
 *.vsidx
 
 # Common node modules locations
