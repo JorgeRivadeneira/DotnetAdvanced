@@ -18,5 +18,5 @@ player.AchievmentUnlocked -= party.Cheering;
 
 static void OnAchievementUnlocked(int points)
 {
-    Console.WriteLine($"Congratulations, achievement unlocked for earning {points} points!");
+    Console.WriteLine($"Congratulations from Progream.cs, achievement unlocked for earning {points} points!");
 }

@@ -37,18 +37,23 @@ public class StudentTest
     }
 
     [Fact]
-    public void AddStudent()
+    public void AddStudent_StudentAdded_Success()
     {
+        //Arrange
         Student student = new Student()
         {
             Id = 1,
             Fullname = "test",
             Grades = new List<double>() { 10, 10 }
         };
+        List<Student> students = new List<Student>();
 
-
+        //Act
+        _mockStudentRepository.Setup(x => x.Add(student));
         _studentController.Add(student);
 
+        //Assert
+        Assert.NotNull(_mockStudentRepository.Object);        
         _mockStudentRepository.Verify(p => p.Add(student), Times.Once);
         //_mockLogBook.Verify(l => l.Add($"The student {student.Fullname}"));
 
