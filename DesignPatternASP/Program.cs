@@ -1,4 +1,7 @@
 using DesignPatternASP.Configuration;
+using DesignPatterns.Models.Data;
+using DesignPatterns.Repository;
+using Microsoft.EntityFrameworkCore;
 using Tools.Earn;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +12,9 @@ builder.Services.Configure<MyConfig>(options =>
 {
     builder.Configuration.GetSection("MyConfig").Bind(options);
 });
+
+builder.Services.AddDbContext<DesignPatternsConsoleDbContext>(opciones =>
+    opciones.UseSqlServer("DefaultConnection"));
 
 builder.Services.AddTransient<LocalEarnFactory>(provider =>
 {
@@ -21,6 +27,8 @@ builder.Services.AddTransient<ForeignEarnFactory>(provider =>
     var extra = builder.Configuration.GetSection("MyConfig").GetValue<decimal>("Extra");
     return new ForeignEarnFactory(foreignPct, extra);
 });
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 
