@@ -2,6 +2,8 @@
 using DesignPatterns.Models;
 using DesignPatterns.RepositoryPattern;
 using DesignPatterns.Singleton;
+using DesignPatterns.StrategyPattern;
+using DesignPatterns.UnitOfWorkPattern;
 using Microsoft.EntityFrameworkCore;
 
 /* Singleton */
@@ -44,26 +46,53 @@ using Microsoft.EntityFrameworkCore;
 //    }
 //}
 
+//Repository Pattern 2
+//using (var context = new DesignPatternsConsoleDbContext())
+//{
+//    var beerRepository = new Repository<Beer>(context);
+//    var beer = new Beer() { Name = "Pilsener Callao", Style = "Negra" };
+//    beerRepository.Add(beer);
+//    beerRepository.Save();
 
-using (var context = new DesignPatternsConsoleDbContext())
-{
-    var beerRepository = new Repository<Beer>(context);
-    var beer = new Beer() { Name = "Pilsener Callao", Style = "Negra" };
-    beerRepository.Add(beer);
-    beerRepository.Save();
+//    foreach(var b in beerRepository.Get())
+//    {
+//        Console.WriteLine($"{b.Id} {b.Name}");
+//    }
 
-    foreach(var b in beerRepository.Get())
-    {
-        Console.WriteLine($"{b.Id} {b.Name}");
-    }
+//    var brandRepository = new Repository<Brand>(context);
+//    var brand = new Brand() { Name = "Pilsener" };
+//    brandRepository.Add(brand);
+//    brandRepository.Save();
 
-    var brandRepository = new Repository<Brand>(context);
-    var brand = new Brand() { Name = "Pilsener" };
-    brandRepository.Add(brand);
-    brandRepository.Save();
+//    foreach (var b in brandRepository.Get())
+//    {
+//        Console.WriteLine($"{b.BrandId} {b.Name}");
+//    }
+//}
 
-    foreach (var b in brandRepository.Get())
-    {
-        Console.WriteLine($"{b.BrandId} {b.Name}");
-    }
-}
+
+//Unit of work pattern
+//using(var context = new DesignPatternsConsoleDbContext())
+//{
+//    var unitOfWork = new UnitOfWork(context);
+//    var beers = unitOfWork.Beers;
+//    var beer = new Beer()
+//    {
+//        Name = "Fuller",
+//        Style = "Porter"
+//    };
+//    beers.Add(beer);
+
+//    var brands = unitOfWork.Brands;
+//    var brand = new Brand()
+//    {
+//        Name = "Fuller",
+//    };
+//    beers.Add(beer);
+
+//    unitOfWork.Save();
+
+//}
+
+//Strategy Patterm
+var strategy = new Main();

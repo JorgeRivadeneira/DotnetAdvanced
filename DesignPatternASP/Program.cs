@@ -29,6 +29,7 @@ builder.Services.AddTransient<ForeignEarnFactory>(provider =>
 });
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
