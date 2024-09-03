@@ -31,16 +31,31 @@ namespace WinFormUI
 
         private void messageBoxDemoButton_Click(object sender, EventArgs e)
         {
-            
+            decimal total = cart.GenerateTotal(SubTotalAlert, CalculateLevelDiscount, PrintOutDiscountAlert);
+            MessageBox.Show($"The total is {total:C2}");
         }
 
-        private void PrintOutDiscountAlert(string discountMessage)
+        private void PrintOutDiscountAlert(string message)
         {
-            
+            MessageBox.Show(message);
+        }
+
+        private void SubTotalAlert(decimal subTotal)
+        {
+            MessageBox.Show($"The subtotal is {subTotal:C2}");
+        }
+
+        private decimal CalculateLevelDiscount(List<ProductModel> products, decimal subTotal)
+        {
+            return subTotal - products.Count();   
         }
 
         private void textBoxDemoButton_Click(object sender, EventArgs e)
         {
+            decimal total = cart.GenerateTotal((subtotal) => subTotalTextBox.Text = $"{subtotal:C2}",
+                (products, subTotal) => subTotal - (products.Count * 2),
+                (message) => { });
+            totalTextBox.Text = $"{total:C2}";
         }
     }
 }

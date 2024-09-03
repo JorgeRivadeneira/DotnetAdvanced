@@ -17,6 +17,19 @@ namespace ConsoleUI
 
             Console.WriteLine($"The total for the cart is {cart.GenerateTotal(SubTotalAlert, CalculateLevelDiscount, AlertUser):C2}");
 
+            decimal total = cart.GenerateTotal((subtotal) => Console.WriteLine($"The subtotal for the cart 2 is: {subtotal:C2}"),
+                (products, subTotal) => {
+                    if (products.Count > 3)
+                    {
+                        return subTotal * 0.5M;
+                    }
+                    else
+                    {
+                        return subTotal;
+                    }
+                },
+                (message) => Console.WriteLine($"Cart2 Alert: {message}"));
+
             Console.WriteLine();
             Console.Write("Please press any key to exit the application...");
             Console.ReadKey();
