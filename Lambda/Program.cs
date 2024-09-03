@@ -17,7 +17,9 @@ using Lambda;
 
 var books = new BookRepository().GetBooks();
 
-var cheapBooks = books.FindAll(IsCheaperTnah10Dollars);
+var cheapBooks = books.FindAll(IsCheaperThan10Dollars);
+Console.WriteLine(cheapBooks);
+
 var cheapBooks2 = books.FindAll(x => x.Price < 10);
 foreach (var book in cheapBooks2)
 {
@@ -25,7 +27,8 @@ foreach (var book in cheapBooks2)
 }
 
 
-static bool IsCheaperTnah10Dollars(Book book)
+static bool IsCheaperThan10Dollars(Book book)
 {
     return book.Price < 10;
 }
+
