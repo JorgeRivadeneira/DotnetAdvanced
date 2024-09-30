@@ -84,9 +84,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic", "Dynamic\Dynamic.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{D3A3C32D-04F5-483B-B6CB-4635EEEFF0C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynchronus Programming", "Asynchronus Programming\Asynchronus Programming.csproj", "{4CBCA6BA-6A5C-45AC-A53F-1D7DE17BF975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynchronus Programming", "Asynchronus Programming\Asynchronus Programming.csproj", "{4CBCA6BA-6A5C-45AC-A53F-1D7DE17BF975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovPrinciple", "Liskov Principle\LiskovPrinciple.csproj", "{391DEDCC-710E-4C9E-B2CF-7DAEEC776221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Liskov-Principle", "Liskov-Principle\Liskov-Principle.csproj", "{6B63D3AC-FD78-4BD9-A35F-FE54DE9EB374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionaries", "Dictionaries\Dictionaries.csproj", "{A940EC0F-54F5-4D95-AFFA-AE841A0CDA42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", "{C041681A-DBB4-4209-92C0-C6CBD3DF058B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{983DF940-889A-4363-9477-3FFE0D593152}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -222,10 +228,18 @@ Global
 		{4CBCA6BA-6A5C-45AC-A53F-1D7DE17BF975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CBCA6BA-6A5C-45AC-A53F-1D7DE17BF975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CBCA6BA-6A5C-45AC-A53F-1D7DE17BF975}.Release|Any CPU.Build.0 = Release|Any CPU
-		{391DEDCC-710E-4C9E-B2CF-7DAEEC776221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{391DEDCC-710E-4C9E-B2CF-7DAEEC776221}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{391DEDCC-710E-4C9E-B2CF-7DAEEC776221}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{391DEDCC-710E-4C9E-B2CF-7DAEEC776221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B63D3AC-FD78-4BD9-A35F-FE54DE9EB374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B63D3AC-FD78-4BD9-A35F-FE54DE9EB374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B63D3AC-FD78-4BD9-A35F-FE54DE9EB374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B63D3AC-FD78-4BD9-A35F-FE54DE9EB374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A940EC0F-54F5-4D95-AFFA-AE841A0CDA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A940EC0F-54F5-4D95-AFFA-AE841A0CDA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A940EC0F-54F5-4D95-AFFA-AE841A0CDA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A940EC0F-54F5-4D95-AFFA-AE841A0CDA42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{983DF940-889A-4363-9477-3FFE0D593152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983DF940-889A-4363-9477-3FFE0D593152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983DF940-889A-4363-9477-3FFE0D593152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983DF940-889A-4363-9477-3FFE0D593152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -255,7 +269,8 @@ Global
 		{358E57A2-846F-417C-B46B-64A7B978584A} = {C5DA4029-CA3D-4D6D-AC45-AA883C72C7F7}
 		{81A6AA8A-5DC5-4272-9825-82B02A2925EF} = {1ACC3B95-2660-4239-B0EB-8102AB5A7EDF}
 		{36502D73-95E5-4254-B5F9-69C30CF281F8} = {1ACC3B95-2660-4239-B0EB-8102AB5A7EDF}
-		{391DEDCC-710E-4C9E-B2CF-7DAEEC776221} = {1ACC3B95-2660-4239-B0EB-8102AB5A7EDF}
+		{6B63D3AC-FD78-4BD9-A35F-FE54DE9EB374} = {1ACC3B95-2660-4239-B0EB-8102AB5A7EDF}
+		{983DF940-889A-4363-9477-3FFE0D593152} = {C041681A-DBB4-4209-92C0-C6CBD3DF058B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7534E728-7C53-4372-B5E1-ED83509A2DD1}
