@@ -2,8 +2,8 @@
 {
     public class EmployeeContractor : Employee
     {
-        public string Fullname { get; set; }
-        public int HoursWorked { get; set; }
+        //public string Fullname { get; set; }
+        //public int HoursWorked { get; set; }
         public EmployeeContractor(string fullname, int hoursWorked)
         {
             Fullname = fullname;
